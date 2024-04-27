@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import './App.css';
+import Boton from '../src/componentes/Boton.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [numClicks, setNumClicks] = useState(0);
+
+  const incrementNum = () => {
+    setNumClicks(numClicks + 1);
+    console.log('Número de clics incrementado');
+  };
+
+  const reiniciarNum = () => {
+    setNumClicks(0);
+    console.log('Número reiniciado');
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container">
+      <h1>Contador de Clicks</h1>
+      <p>Número de Clicks: {numClicks}</p>
+      <div className="botones">
+        <Boton text="Clic" onclick={incrementNum} esClick={true} />
+        <Boton text="Reiniciar" onclick={reiniciarNum} esClick={false} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
