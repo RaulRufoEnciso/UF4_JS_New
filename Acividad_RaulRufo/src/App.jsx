@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
+import Button from './componentes/Button';
 import './App.css';
-import Boton from '../src/componentes/Boton.jsx';
 
 function App() {
-  const [numClicks, setNumClicks] = useState(0);
+  const [numClics, setNumClics] = useState(0);
 
   const incrementNum = () => {
-    setNumClicks(numClicks + 1);
-    console.log('Número de clics incrementado');
+    setNumClics(numClics + 1);
   };
 
   const reiniciarNum = () => {
-    setNumClicks(0);
-    console.log('Número reiniciado');
+    setNumClics(0);
   };
 
   return (
-    <div className="container">
-      <h1>Contador de Clicks</h1>
-      <p>Número de Clicks: {numClicks}</p>
-      <div className="botones">
-        <Boton text="Clic" onclick={incrementNum} esClick={true} />
-        <Boton text="Reiniciar" onclick={reiniciarNum} esClick={false} />
+    <div className="App">
+      <div className="counter-display">
+        <div className="number">{numClics}</div>
+      </div>
+      <div className="button-container">
+        <Button text="Clic" onClick={incrementNum} esClick={true} />
+        <Button text="Reiniciar" onClick={reiniciarNum} esClick={false} />
       </div>
     </div>
   );

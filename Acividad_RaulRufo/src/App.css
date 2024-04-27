@@ -1,26 +1,84 @@
-.container {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.botones {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-button {
+.btnClick {
+  background-color: #4CAF50;
+  color: white;
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.btnClick {
-  background-color: #007bff;
+.btnReiniciar {
+  background-color: #f44336;
   color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+.App {
+  text-align: center;
+  padding-top: 50px;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+}
+
+.counter-display {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  background-color: #333;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.number {
+  color: #ffffff;
+  font-size: 5em;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btnClick {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.btnClick:hover {
+  background-color: #45a049;
 }
 
 .btnReiniciar {
-  background-color: #dc3545;
+  background-color: #f44336;
   color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.btnReiniciar:hover {
+  background-color: #e53935;
 }
