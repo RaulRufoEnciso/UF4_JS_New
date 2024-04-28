@@ -1,0 +1,33 @@
+.tasca {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #04001a;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.tasca:hover {
+  background-color: #1d004b;
+}
+
+.tascaCompletada {
+  background-color: #530074;
+  text-decoration: line-through;
+  color: #ffffff;
+}
+
+.tasca p {
+  margin: 0;
+}
+
+.tasca svg {
+  cursor: pointer;
+  color: #888;
+}
+
+.tasca svg:hover {
+  color: #555;
+}

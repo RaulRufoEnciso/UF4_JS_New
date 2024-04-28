@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from './componentes/Button';
+import LlistatTasques from './componentes/LlistatTasques';
 import './App.css';
 
 function App() {
@@ -22,6 +23,11 @@ function App() {
         <Button text="Clic" onClick={incrementNum} esClick={true} />
         <Button text="Reiniciar" onClick={reiniciarNum} esClick={false} />
       </div>
+      <div className='tarques'>
+        <LlistatTasques />
+      </div>
+      
+
     </div>
   );
 }
